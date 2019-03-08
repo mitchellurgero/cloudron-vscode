@@ -23,3 +23,6 @@ cloudron login
 cloudron install --image mitchellurgero/org.urgero.codeserver:0.0.2
 ```
 
+## Special Ports
+
+ - TCP port 3000 is used internally to forward traffic from apps you develop inside VSCode to the outside. However the outside port is configurable via the Cloudron UI.
