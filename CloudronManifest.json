@@ -15,8 +15,8 @@
   "postInstallMessage":"A default password was generated and saved unencrypted due to cloudron and code-server limitations. See the apps logs for the current password and use that to login. You can change the password by modifying <code>/app/data/temp</code> in the apps terminal.",
   "manifestVersion": 1,
   "private": true,
-  "website": "https://cloudron.io",
-  "contactEmail": "support@cloudron.io",
+  "website": "https://github.com/mitchellurgero/cloudron-vscode",
+  "contactEmail": "info@urgero.org",
   "icon": "file://logo.png",
   "tags": [
     "something"
