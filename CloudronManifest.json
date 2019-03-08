@@ -1,0 +1,25 @@
+{
+  "id": "org.urgero.codeserver",
+  "title": "VSCode Server",
+  "author": "Mitchell Urgero <info@urgero.org>",
+  "description": "file://DESCRIPTION.md",
+  "changelog": "file://CHANGELOG",
+  "tagline": "eh, I guess just to test?",
+  "version": "0.0.2",
+  "healthCheckPath": "/",
+  "httpPort": 8000,
+  "memoryLimit":2147483648,
+  "addons": {
+    "localstorage": {}
+  },
+  "postInstallMessage":"A default password was generated and saved unencrypted due to cloudron and code-server limitations. See the apps logs for the current password and use that to login. You can change the password by modifying <code>/app/data/temp</code> in the apps terminal.",
+  "manifestVersion": 1,
+  "private": true,
+  "website": "https://cloudron.io",
+  "contactEmail": "support@cloudron.io",
+  "icon": "file://logo.png",
+  "tags": [
+    "something"
+  ],
+  "mediaLinks": [ ]
+}
