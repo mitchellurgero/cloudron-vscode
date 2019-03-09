@@ -6,16 +6,13 @@ ADD start.sh /app/code/start.sh
 RUN mkdir -p /app/data/workdir
 RUN chmod +x /app/code/start.sh
 
-# Setup NodeJS default dir to something else since we are in a read-only FS.
 # Fixes a read-only filesystem error.
-# Since this is VSCode and not a standalone node app, this should be fine.
+# Since this is VSCode and not a standalone node/php/go app, this should be fine.
 RUN mkdir -p /app/data/global
-RUN mkdir -p /app/data/global/.npm
-RUN mkdir -p /app/data/global/.config
-RUN mkdir -p /app/data/global/.npm-gyp
-RUN ln -s /app/data/global/.npm /home/cloudron/.npm
-RUN ln -s /app/data/global/.npm-gyp /home/cloudron/.npm-gyp
-RUN ln -s /app/data/global/.config /home/cloudron/.config
+## For whatever reason, the full home dir symlink doesnt work if the folder exists, lets remove and link it :)
+RUN rm -rf /home/cloudron
+RUN ln -s /app/data/global /home/cloudron
+RUN chown -R cloudron:cloudron /home/cloudron
 
 # Set permissions
 RUN chown -R cloudron:cloudron /app/data
