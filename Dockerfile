@@ -17,6 +17,8 @@ RUN ln -s /app/data/global/.npm /root/.npm
 RUN ln -s /app/data/global/.npm-gyp /root/.npm-gyp
 RUN ln -s /app/data/global/.config /root/.config
 
+# Set permissions
+RUN chown -R cloudron:cloudron /app/data
 
 # Run start script
 CMD [ "/app/code/start.sh" ]
