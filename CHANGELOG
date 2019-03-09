@@ -1,3 +1,8 @@
+0.0.3
+======
+- Symlink /home/cloudron -> /app/data/global for proper permissions and to avoid read-only filesystem errors when using node/go/php/etc
+- Move running code-server as cloudron and not as root for better security
+
 0.0.2
 ======
 - True initial build
