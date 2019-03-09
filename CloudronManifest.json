@@ -16,9 +16,9 @@
   "tcpPorts": {
     "APP_PORT": {
       "title": "APP Port",
-      "description": "A TCP Port used for any services you plan to test while coding in VSCode. (NodeJS server, PHP Server, Go Server, etc). Since this is Docker, the value here is the listening port on your Cloudron instance. Your app must listen on port 3000 internally while in VSCode.",
-      "defaultValue": 3000,
-      "containerPort": 3000
+      "description": "A TCP Port used for any services you plan to test while coding in VSCode. (NodeJS server, PHP Server, Go Server, etc). Since this is Docker, the value here is the listening port on your Cloudron instance. Your app must listen on port 3333 internally while in VSCode.",
+      "defaultValue": 3333,
+      "containerPort": 3333
     }
   },
   "manifestVersion": 1,
