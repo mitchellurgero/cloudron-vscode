@@ -13,9 +13,9 @@ RUN mkdir -p /app/data/global
 RUN mkdir -p /app/data/global/.npm
 RUN mkdir -p /app/data/global/.config
 RUN mkdir -p /app/data/global/.npm-gyp
-RUN ln -s /app/data/global/.npm /root/.npm
-RUN ln -s /app/data/global/.npm-gyp /root/.npm-gyp
-RUN ln -s /app/data/global/.config /root/.config
+RUN ln -s /app/data/global/.npm /home/cloudron/.npm
+RUN ln -s /app/data/global/.npm-gyp /home/cloudron/.npm-gyp
+RUN ln -s /app/data/global/.config /home/cloudron/.config
 
 # Set permissions
 RUN chown -R cloudron:cloudron /app/data
