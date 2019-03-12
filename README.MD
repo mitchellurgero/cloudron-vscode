@@ -14,13 +14,39 @@ Built from https://github.com/codercom/code-server. I will do my best to keep th
 
 - I did not make VSCode or code-server. I just built this *very* *alpha* build of cloudron-vscode. Please, use at your own risk.
 
+## Currently Installed Packages / Supported Languages
+
+- Follows Cloudron:base:1.0.0 (See: [Cloudron Baseimage Packages](https://cloudron.io/developer/baseimage/#packages)
+
+**On top of the above, I have also included the following packages (since this is Visual Studio Code after all)**
+
+- Powershell, installed from Microsofts pre-built binaries for Ubuntu 18.04 64 bit (If you need a different CPU arch, you will need to download this repo, and cloudron build to get an image that works for non-64 bit CPUs)
+- Mono-complete for C# / Visual Basic development, only CLI applications are supported at this time however.
+
+**Supported Langauges**
+
+(If I missed one, let me know by opening an issue or Pull Request.)
+
+- JavaScript
+- PHP5/7 (PHP 7.0.3 installed, which is backwards compatible with most PHP5 functions and scripts)
+- Go
+- NodeJS
+- Visual Basic
+- C#
+- PowerShell
+- Java
+- Perl
+- Python
+- Ruby
+
 ## Installing on Cloudron
 
 - Make sure you have [Cloudron CLI installed](https://cloudron.io/developer/cli/) on a Linux computer that is NOT your cloudron server. (See docs for details)
-- Then do the follow:
+- Then do the following:
+
 ```
 cloudron login
-cloudron install --image mitchellurgero/org.urgero.codeserver:0.0.2
+cloudron install --image mitchellurgero/org.urgero.codeserver:0.0.3 # Might need to change to whatever the latest build is.
 ```
 
 ## Special Ports
