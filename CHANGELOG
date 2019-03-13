@@ -3,6 +3,7 @@
 - Symlink /home/cloudron -> /app/data/global for proper permissions and to avoid read-only filesystem errors when using node/go/php/etc
 - Move running code-server as cloudron and not as root for better security
 - Add PowerShell & Mono-Complete for C#/VB/PS development (This is Visual Studio Code after all)
+- Updated code-server to 1.32.0-245
 
 0.0.2
 ======
