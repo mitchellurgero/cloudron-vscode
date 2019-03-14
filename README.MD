@@ -65,7 +65,7 @@ cloudron install
 
 - **Building and using local docker to deploy**
 
-* Note: The below instructions have not been tested, please open an issue if they do not work. *
+*Note: The below instructions have not been tested, please open an issue if they do not work.*
 
 ```bash
 git clone https://github.com/mitchellurgero/cloudron-vscode
