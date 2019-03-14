@@ -1,3 +1,8 @@
+0.0.4
+=====
+- Added a download script to download the latest release of code-server on every build. No longer required to grab one yourself anymore.
+- Cleaned repo
+
 0.0.3
 ======
 - Symlink /home/cloudron -> /app/data/global for proper permissions and to avoid read-only filesystem errors when using node/go/php/etc

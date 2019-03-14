@@ -1,10 +1,16 @@
 FROM cloudron/base:1.0.0
 
 # Setup dir's and binary for code-server
-ADD code-server /app/code/code-server
 ADD start.sh /app/code/start.sh
+ADD download.sh /app/code/download.sh
 RUN mkdir -p /app/data/workdir
 RUN chmod +x /app/code/start.sh
+RUN chmod +x /app/code/download.sh
+
+
+# Install Basic Dependencies
+RUN apt update
+RUN apt install jq
 
 # Fixes a read-only filesystem error.
 # Since this is VSCode and not a standalone node/php/go app, this should be fine.
@@ -13,6 +19,9 @@ RUN mkdir -p /app/data/global
 RUN rm -rf /home/cloudron
 RUN ln -s /app/data/global /home/cloudron
 RUN chown -R cloudron:cloudron /home/cloudron
+
+# Run download script for any stuff we need that is not available in the ubuntu repos (like the code-server pacakges)
+RUN /bin/bash /app/code/download.sh
 
 # Install Mono-Complete for .NET development
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
