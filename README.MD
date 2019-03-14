@@ -49,6 +49,46 @@ cloudron login
 cloudron install --image mitchellurgero/org.urgero.codeserver:0.0.3 # Might need to change to whatever the latest build is.
 ```
 
+## Building from source
+
+- **Building and using Build Service to deploy**
+
+```bash
+git clone https://github.com/mitchellurgero/cloudron-vscode
+cd cloudron-vscode
+cloudron login
+cloudron build
+# Optional
+cloudron install
+```
+
+
+- **Building and using local docker to deploy**
+
+* Note: The below instructions have not been tested, please open an issue if they do not work. *
+
+```bash
+git clone https://github.com/mitchellurgero/cloudron-vscode
+cd cloudron-vscode
+
+## Change as you need!
+docker build -t dockername/projectname:tagname
+docker tag dockername/projectname:tagname dockerhuburl/dockername/projectname:tagname
+docker push dockerhuburl/dockername/projectname:tagname
+
+## End docker changes
+
+cloudron install --image dockerhuburl/dockername/projectname:tagname
+```
+
+
 ## Special Ports
 
  - TCP port 3333 is used internally to forward traffic from apps you develop inside VSCode to the outside. However the outside port is configurable via the Cloudron UI.
+
+
+## Other Considerations
+
+- Logos, Trademarks, etc are copyright of their respective owners.
+- This project is built off of codercom/code-server, however this project is not affiliated with Visual Studio or Microsoft.
+
