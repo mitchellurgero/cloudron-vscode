@@ -14,6 +14,8 @@ Built from https://github.com/codercom/code-server. I will do my best to keep th
 
 - I did not make VSCode or code-server. I just built this *very* *alpha* build of cloudron-vscode. Please, use at your own risk.
 
+- The lower Memory Limit was reduced from 2096MB to 512MB. This was done to simplify installation, however you may need to increase this to 1024MB or more when in use.
+
 ## Currently Installed Packages / Supported Languages
 
 - Follows Cloudron:base:1.0.0 (See: [Cloudron Baseimage Packages](https://cloudron.io/developer/baseimage/#packages)
