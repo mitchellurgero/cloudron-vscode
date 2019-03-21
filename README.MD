@@ -74,12 +74,11 @@ git clone https://github.com/mitchellurgero/cloudron-vscode
 cd cloudron-vscode
 
 ## Change as you need!
-docker build -t dockername/projectname:tagname
-docker tag dockername/projectname:tagname dockerhuburl/dockername/projectname:tagname
-docker push dockerhuburl/dockername/projectname:tagname
+docker build -t dockername/projectname:tagname .
+docker push dockername/projectname:tagname
 
 ## End docker changes
-
+cloudron login
 cloudron install --image dockerhuburl/dockername/projectname:tagname
 ```
 
