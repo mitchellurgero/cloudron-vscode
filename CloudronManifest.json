@@ -8,7 +8,7 @@
   "version": "0.0.4",
   "healthCheckPath": "/",
   "httpPort": 8000,
-  "memoryLimit":2147483648,
+  "memoryLimit":512000000,
   "addons": {
     "localstorage": {}
   },
