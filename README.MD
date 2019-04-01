@@ -48,7 +48,7 @@ Built from https://github.com/codercom/code-server. I will do my best to keep th
 
 ```
 cloudron login
-cloudron install --image mitchellurgero/org.urgero.codeserver:0.0.4 # Might need to change to whatever the latest build is.
+cloudron install --image mitchellurgero/org.urgero.codeserver:latest # Might need to change to whatever the latest build is.
 ```
 
 ## Building from source
