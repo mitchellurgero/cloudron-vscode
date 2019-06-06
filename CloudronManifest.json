@@ -5,10 +5,10 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
   "tagline": "eh, I guess just to test?",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "healthCheckPath": "/",
   "httpPort": 8000,
-  "memoryLimit":536870912,
+  "memoryLimit":2147483648,
   "addons": {
     "localstorage": {}
   },
