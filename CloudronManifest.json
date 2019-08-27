@@ -5,12 +5,13 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
   "tagline": "eh, I guess just to test?",
-  "version": "0.0.5",
-  "healthCheckPath": "/",
-  "httpPort": 8000,
+  "version": "0.0.6",
+  "healthCheckPath": "/healthcheck",
+  "httpPort": 8001,
   "memoryLimit":2147483648,
   "addons": {
-    "localstorage": {}
+    "localstorage": {},
+    "ldap": {}
   },
   "postInstallMessage":"A default password was generated and saved unencrypted due to cloudron and code-server limitations. See the apps logs for the current password and use that to login. You can change the password by modifying <code>/app/data/temp</code> in the apps terminal.",
   "tcpPorts": {

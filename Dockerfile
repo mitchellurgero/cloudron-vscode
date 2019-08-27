@@ -1,4 +1,4 @@
-FROM cloudron/base:1.0.0
+FROM cloudron/base:1.0.0@sha256:147a648a068a2e746644746bbfb42eb7a50d682437cead3c67c933c546357617
 
 # Setup dir's and binary for code-server
 ADD start.sh /app/code/start.sh
@@ -11,12 +11,12 @@ RUN chmod +x /app/code/download.sh
 # Install Basic Dependencies
 RUN apt update
 RUN apt install jq
-RUN apt install apache2
 RUN a2enmod proxy*
-RUN a2enmod rewrite mime ldap authnz_ldap
+RUN a2enmod rewrite mime ldap authnz_ldap headers
 ADD site.conf /etc/apache2/sites-available/site.conf
 ADD ports.conf /etc/apache2/ports.conf
-
+RUN a2ensite site
+RUN a2dissite 000-default
 # Fixes a read-only filesystem error.
 # Since this is VSCode and not a standalone node/php/go app, this should be fine.
 RUN mkdir -p /app/data/global
@@ -44,7 +44,7 @@ RUN apt install -y powershell
 # Set permissions
 RUN chown -R cloudron:cloudron /app/data
 
-#EXPOSE 8000
+EXPOSE 8001
 
 # Run start script
 CMD [ "/app/code/start.sh" ]
