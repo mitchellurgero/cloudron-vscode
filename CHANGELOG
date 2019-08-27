@@ -1,3 +1,8 @@
+08/27/2019
+=====
+- Updated code-server to 1.1156-vsc1.33.1
+- Updated to use apache2 to proxy and authenticate with LDAP
+
 06/06/2019
 =====
 - Updated code-server to 1.1140-vsc1.33.1
