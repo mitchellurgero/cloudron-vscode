@@ -43,6 +43,7 @@ RUN apt install -y powershell
 
 # Set permissions
 RUN chown -R cloudron:cloudron /app/data
+RUN npm install -g cloudron
 
 EXPOSE 8001
 
