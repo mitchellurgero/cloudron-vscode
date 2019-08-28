@@ -10,7 +10,7 @@ RUN chmod +x /app/code/download.sh
 
 # Install Basic Dependencies
 RUN apt update
-RUN apt install jq
+RUN apt install jq apt-transport-https
 RUN a2enmod proxy*
 RUN a2enmod rewrite mime ldap authnz_ldap headers
 ADD site.conf /etc/apache2/sites-available/site.conf
@@ -39,7 +39,7 @@ RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-p
 RUN dpkg -i /app/code/powershell.deb
 RUN apt update
 RUN apt install -y powershell
-
+RUN apt-get install dotnet-sdk-2.2
 
 # Set permissions
 RUN chown -R cloudron:cloudron /app/data
