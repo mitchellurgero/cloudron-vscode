@@ -7,7 +7,7 @@
   "tagline": "eh, I guess just to test?",
   "version": "0.0.6",
   "healthCheckPath": "/healthcheck",
-  "httpPort": 8001,
+  "httpPort": 8000,
   "memoryLimit":2147483648,
   "addons": {
     "localstorage": {},
