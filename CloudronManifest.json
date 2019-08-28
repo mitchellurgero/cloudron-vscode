@@ -5,7 +5,7 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
   "tagline": "eh, I guess just to test?",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "healthCheckPath": "/",
   "httpPort": 8000,
   "memoryLimit":2147483648,
@@ -13,7 +13,7 @@
     "localstorage": {},
     "ldap": {}
   },
-  "postInstallMessage":"A default password was generated and saved unencrypted due to cloudron and code-server limitations. See the apps logs for the current password and use that to login. You can change the password by modifying <code>/app/data/temp</code> in the apps terminal.",
+  "postInstallMessage":"Until LDAP can be fixed, you will need to get the password from the App's Logs. This password changes on each reboot of the App.",
   "tcpPorts": {
     "APP_PORT": {
       "title": "APP Port",

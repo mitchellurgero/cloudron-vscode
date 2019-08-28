@@ -10,13 +10,13 @@ RUN chmod +x /app/code/download.sh
 
 # Install Basic Dependencies
 RUN apt update
-RUN apt install jq apt-transport-https
-RUN a2enmod proxy*
-RUN a2enmod rewrite mime ldap authnz_ldap headers
-ADD site.conf /etc/apache2/sites-available/site.conf
-ADD ports.conf /etc/apache2/ports.conf
-RUN a2ensite site
-RUN a2dissite 000-default
+RUN apt install jq apt-transport-https -y
+#RUN a2enmod proxy*
+#RUN a2enmod rewrite mime ldap authnz_ldap headers
+#ADD site.conf /etc/apache2/sites-available/site.conf
+#ADD ports.conf /etc/apache2/ports.conf
+#RUN a2ensite site
+#RUN a2dissite 000-default
 # Fixes a read-only filesystem error.
 # Since this is VSCode and not a standalone node/php/go app, this should be fine.
 RUN mkdir -p /app/data/global
@@ -39,7 +39,7 @@ RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-p
 RUN dpkg -i /app/code/powershell.deb
 RUN apt update
 RUN apt install -y powershell
-RUN apt-get install dotnet-sdk-2.2
+RUN apt-get install dotnet-sdk-2.2 -y
 
 # Set permissions
 RUN chown -R cloudron:cloudron /app/data
